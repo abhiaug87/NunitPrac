@@ -13,7 +13,6 @@ namespace NunitPrac.Utilities
     public class Hooks : BaseClass
     {
         private readonly ScenarioContext scenarioContext;
-        readonly string currentDirectory = Directory.GetParent(NUnit.Framework.TestContext.CurrentContext.TestDirectory).Parent.Parent.ToString();
         public Hooks(ScenarioContext scenarioContext)
         {
             this.scenarioContext = scenarioContext;
@@ -44,9 +43,9 @@ namespace NunitPrac.Utilities
         {
             if (NUnit.Framework.TestContext.CurrentContext.Result.Outcome != ResultState.Success)
             {
-                var dir = $@"{currentDirectory}/Screenshots";
+                var dir = $@"{Directory.GetParent(NUnit.Framework.TestContext.CurrentContext.TestDirectory).Parent.Parent}/Screenshots";
                 Directory.CreateDirectory(dir);
-                string pathfile = Path.Combine(currentDirectory + @"//Screenshots", "Screenshot" + "_" + DateTime.Now.ToString("(dd_MMMM_hh_mm_ss_tt).JPG"));
+                string pathfile = Path.Combine(Directory.GetParent(NUnit.Framework.TestContext.CurrentContext.TestDirectory).Parent.Parent + @"//Screenshots", "Screenshot" + "_" + DateTime.Now.ToString("(dd_MMMM_hh_mm_ss_tt).JPG"));
                 var screenshot = Driver.TakeScreenshot();
                 screenshot.SaveAsFile(pathfile, ScreenshotImageFormat.Jpeg);
             }
