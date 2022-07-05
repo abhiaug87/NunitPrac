@@ -15,8 +15,6 @@ namespace NunitPrac.Data
             StreamReader file = File.OpenText(reportPath);
             JsonTextReader reader = new JsonTextReader(file);
             JObject o2 = (JObject)JToken.ReadFrom(reader);
-            dynamic fileContents = JArray.Parse("[" + o2.ToString() + "]");
-            _ = fileContents[0];
             var value = o2[itemName].ToString();
             return value;
 
