@@ -70,12 +70,13 @@ namespace NunitPrac.Stepdefinition
         }
 
 
-        [When(@"I click cancel")]
-        public void WhenIClickCancel()
+        [When(@"I click ""([^""]*)""")]
+        public void WhenIClick(string cancel)
         {
-            Assert.IsTrue(po.cancelbtn.Text.Contains(read.Jr("TestData.json", "cancelbtn")), "Text does not match as expected");
+            Assert.IsTrue(po.cancelbtn.Text.Contains(cancel), "Text does not match as expected");
             po.cancelbtn.Click();
         }
+
 
         [Then(@"I am redirected to the main page")]
         [Given(@"I am redirected to the main page")]

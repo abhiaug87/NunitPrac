@@ -163,7 +163,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("I want to register", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 20
- testRunner.When("I click cancel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I click \"Cancel\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 21
  testRunner.Then("I am redirected to the main page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

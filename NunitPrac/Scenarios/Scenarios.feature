@@ -17,7 +17,7 @@ Scenario: First time user - Registration Flow
 Scenario: Cancel out of the Registration flow
 	Given I am on the main page
 	And I want to register
-	When I click cancel
+	When I click "Cancel"
 	Then I am redirected to the main page
 
 @test
