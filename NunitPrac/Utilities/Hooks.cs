@@ -24,15 +24,15 @@ namespace NunitPrac.Utilities
             {
                 Driver = DriverFactory.InitiateWebDriver(CommonConstants.DriverSettings.ChromeBrowser);
             }
-            if (scenarioContext.ScenarioInfo.Tags.Contains("Edge"))
+            else if (scenarioContext.ScenarioInfo.Tags.Contains("Edge"))
             {
                 Driver = DriverFactory.InitiateWebDriver(CommonConstants.DriverSettings.EdgeBrowser);
             }
-            if (scenarioContext.ScenarioInfo.Tags.Contains("FireFox"))
+            else if (scenarioContext.ScenarioInfo.Tags.Contains("FireFox"))
             {
                 Driver = DriverFactory.InitiateWebDriver(CommonConstants.DriverSettings.FireFoxBrowser);
             }
-            else if (scenarioContext.ScenarioInfo.Tags.Contains("Headless"))
+            else
             {
                 Driver = DriverFactory.InitiateWebDriver(CommonConstants.DriverSettings.HeadlessBrowser);
             }
