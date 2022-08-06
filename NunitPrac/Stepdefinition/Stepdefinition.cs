@@ -63,12 +63,11 @@ namespace NunitPrac.Stepdefinition
             writer.Close();
         }
 
-        [Then(@"I am registered successfully")]
-        public void ThenIAmRegisteredSuccessfully()
+        [Then(@"I see the message ""([^""]*)""")]
+        public void ThenISeeTheMessage(string message)
         {
-            Assert.IsTrue(po.cnfmsg.Text.Contains(read.Jr("TestData.json", "cnfmsg")), "Text does not match as expected");
+            Assert.IsTrue(po.cnfmsg.Text.Contains(message), "Text does not match as expected");
         }
-
 
         [When(@"I click ""([^""]*)""")]
         public void WhenIClick(string cancel)
@@ -135,12 +134,11 @@ namespace NunitPrac.Stepdefinition
             Assert.Greater(j, i);
         }
 
-        [Then(@"I am able to see the appropriate message")]
-        public void ThenIAmAbleToSeeTheAppropriateMessage()
+        [Then(@"I am able to see the message ""([^""]*)""")]
+        public void ThenIAmAbleToSeeTheMessage(string message)
         {
-            Assert.IsTrue(po.votingmsg.Text.Contains(read.Jr("TestData.json", "votingmsg")), "Text does not match as expected");
+            Assert.IsTrue(po.votingmsg.Text.Contains(message), "Text does not match as expected");
         }
-
 
 
         [Given(@"I click on the list of cars")]

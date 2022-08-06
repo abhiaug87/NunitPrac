@@ -117,7 +117,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("I add my details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 12
- testRunner.Then("I am registered successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I see the message \"Registration is successful\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -218,7 +218,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("I cast a vote for my favorite car", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 31
- testRunner.Then("I am able to see the appropriate message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I am able to see the message \"Thank you for your vote!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -267,7 +267,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("I select my favorite car", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 40
- testRunner.Then("I am able to see the appropriate message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I am able to see the message \"Thank you for your vote!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

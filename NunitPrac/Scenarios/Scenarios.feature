@@ -9,7 +9,7 @@ Scenario: First time user - Registration Flow
 	Given I am on the main page
 	And I want to register
 	When I add my details
-	Then I am registered successfully
+	Then I see the message "Registration is successful"
 
 @test
 @alt
@@ -28,7 +28,7 @@ Scenario: First Vote for favorite car
 	And I login to the application
 	And I select my favorite car
 	When I cast a vote for my favorite car
-	Then I am able to see the appropriate message
+	Then I am able to see the message "Thank you for your vote!"
 
 @test
 @alt
@@ -37,7 +37,7 @@ Scenario: Revote favourite car
 	Given I am on the main page
 	And I login to the application
 	And I select my favorite car
-	Then I am able to see the appropriate message
+	Then I am able to see the message "Thank you for your vote!"
 
 @test
 @basic
