@@ -7,7 +7,7 @@ These have been combined in the following scenarios.
 @Headless
 Scenario: First time user - Registration Flow
 	Given I am on the main page
-	And I want to register
+	And I click on "Register"
 	When I add my details
 	Then I see the message "Registration is successful"
 
@@ -16,7 +16,7 @@ Scenario: First time user - Registration Flow
 @Headless
 Scenario: Cancel out of the Registration flow
 	Given I am on the main page
-	And I want to register
+	And I click on "Register"
 	When I click "Cancel"
 	Then I am redirected to the main page
 

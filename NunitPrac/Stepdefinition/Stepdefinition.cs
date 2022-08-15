@@ -28,13 +28,14 @@ namespace NunitPrac.Stepdefinition
             Driver.Navigate().GoToUrl(read.Jr("TestData.json", "url"));
         }
 
-        [Given(@"I want to register")]
-        public void GivenIWantToRegister()
-        {
-            Assert.IsTrue(po.registry.Text.Contains(read.Jr("TestData.json", "registry")), "Text does not match as expected");
-            po.registry.Click();
 
+        [Given(@"I click on ""([^""]*)""")]
+        public void GivenIClickOn(string register)
+        {
+            Assert.IsTrue(po.registry.Text.Contains(register), "Text does not match as expected");
+            po.registry.Click();
         }
+
 
         [When(@"I add my details")]
         public void WhenIAddMyDetails()

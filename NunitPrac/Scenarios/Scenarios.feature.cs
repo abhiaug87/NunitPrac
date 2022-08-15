@@ -111,7 +111,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I am on the main page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 10
- testRunner.And("I want to register", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I click on \"Register\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 11
  testRunner.When("I add my details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -160,7 +160,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I am on the main page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 19
- testRunner.And("I want to register", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I click on \"Register\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 20
  testRunner.When("I click \"Cancel\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
