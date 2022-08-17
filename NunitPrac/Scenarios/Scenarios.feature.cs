@@ -78,13 +78,13 @@ namespace NunitPrac.Scenarios
         [NUnit.Framework.DescriptionAttribute("First time user - Registration Flow")]
         [NUnit.Framework.CategoryAttribute("test")]
         [NUnit.Framework.CategoryAttribute("basic")]
-        [NUnit.Framework.CategoryAttribute("Chrome")]
+        [NUnit.Framework.CategoryAttribute("Headless")]
         public virtual void FirstTimeUser_RegistrationFlow()
         {
             string[] tagsOfScenario = new string[] {
                     "test",
                     "basic",
-                    "Chrome"};
+                    "Headless"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("First time user - Registration Flow", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 8

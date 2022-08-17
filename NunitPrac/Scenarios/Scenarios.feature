@@ -4,7 +4,7 @@ These have been combined in the following scenarios.
 
 @test
 @basic
-@Chrome
+@Headless
 Scenario: First time user - Registration Flow
 	Given I am on the main page
 	And I click on "Register"
