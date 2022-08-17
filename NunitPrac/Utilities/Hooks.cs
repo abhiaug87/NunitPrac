@@ -49,10 +49,7 @@ namespace NunitPrac.Utilities
                 var screenshot = Driver.TakeScreenshot();
                 screenshot.SaveAsFile(pathfile, ScreenshotImageFormat.Jpeg);
             }
-            else
-            {
-                Console.WriteLine("Test has passed");
-            }
+            Console.WriteLine("Test has passed");
             Driver.Dispose();
         }
     }
