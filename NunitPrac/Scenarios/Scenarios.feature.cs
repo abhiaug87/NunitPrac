@@ -78,13 +78,13 @@ namespace NunitPrac.Scenarios
         [NUnit.Framework.DescriptionAttribute("First time user - Registration Flow")]
         [NUnit.Framework.CategoryAttribute("test")]
         [NUnit.Framework.CategoryAttribute("basic")]
-        [NUnit.Framework.CategoryAttribute("Headless")]
+        [NUnit.Framework.CategoryAttribute("Edge")]
         public virtual void FirstTimeUser_RegistrationFlow()
         {
             string[] tagsOfScenario = new string[] {
                     "test",
                     "basic",
-                    "Headless"};
+                    "Edge"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("First time user - Registration Flow", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 8
@@ -127,13 +127,13 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.DescriptionAttribute("Cancel out of the Registration flow")]
         [NUnit.Framework.CategoryAttribute("test")]
         [NUnit.Framework.CategoryAttribute("alt")]
-        [NUnit.Framework.CategoryAttribute("Headless")]
+        [NUnit.Framework.CategoryAttribute("Edge")]
         public virtual void CancelOutOfTheRegistrationFlow()
         {
             string[] tagsOfScenario = new string[] {
                     "test",
                     "alt",
-                    "Headless"};
+                    "Edge"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Cancel out of the Registration flow", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 17
@@ -176,13 +176,13 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.DescriptionAttribute("First Vote for favorite car")]
         [NUnit.Framework.CategoryAttribute("test")]
         [NUnit.Framework.CategoryAttribute("basic")]
-        [NUnit.Framework.CategoryAttribute("Headless")]
+        [NUnit.Framework.CategoryAttribute("Edge")]
         public virtual void FirstVoteForFavoriteCar()
         {
             string[] tagsOfScenario = new string[] {
                     "test",
                     "basic",
-                    "Headless"};
+                    "Edge"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("First Vote for favorite car", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 26
@@ -228,13 +228,13 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.DescriptionAttribute("Revote favourite car")]
         [NUnit.Framework.CategoryAttribute("test")]
         [NUnit.Framework.CategoryAttribute("alt")]
-        [NUnit.Framework.CategoryAttribute("Headless")]
+        [NUnit.Framework.CategoryAttribute("Edge")]
         public virtual void RevoteFavouriteCar()
         {
             string[] tagsOfScenario = new string[] {
                     "test",
                     "alt",
-                    "Headless"};
+                    "Edge"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Revote favourite car", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 36
@@ -277,13 +277,13 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.DescriptionAttribute("Traverse through pages and logout")]
         [NUnit.Framework.CategoryAttribute("test")]
         [NUnit.Framework.CategoryAttribute("basic")]
-        [NUnit.Framework.CategoryAttribute("Headless")]
+        [NUnit.Framework.CategoryAttribute("Edge")]
         public virtual void TraverseThroughPagesAndLogout()
         {
             string[] tagsOfScenario = new string[] {
                     "test",
                     "basic",
-                    "Headless"};
+                    "Edge"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Traverse through pages and logout", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 45
