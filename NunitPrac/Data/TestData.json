@@ -23,9 +23,5 @@
   "carvoting": "Testing",
   "votetxt": "Vote!",
   "viewmore": "View more",
-  "logout": "Logout",
-  "extsub": "https://subscription2.xero-test.com/subscription/list",
-  "email": "loadtest4@test.xero.com",
-  "pass": "aaaa1111",
-  "createuserurl": "https://login.cdo2.xero-test.com/user/create"
+  "logout": "Logout"
 }
