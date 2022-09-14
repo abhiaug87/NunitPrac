@@ -4,7 +4,7 @@ These have been combined in the following scenarios.
 
 @test
 @basic
-@Edge
+@Headless
 Scenario: First time user - Registration Flow
 	Given I am on the main page
 	And I click on "Register"
@@ -13,7 +13,7 @@ Scenario: First time user - Registration Flow
 
 @test
 @alt
-@Edge
+@Headless
 Scenario: Cancel out of the Registration flow
 	Given I am on the main page
 	And I click on "Register"
@@ -22,7 +22,7 @@ Scenario: Cancel out of the Registration flow
 
 @test
 @basic
-@Edge
+@Headless
 Scenario: First Vote for favorite car
 	Given I am on the main page
 	And I login to the application
@@ -32,7 +32,7 @@ Scenario: First Vote for favorite car
 
 @test
 @alt
-@Edge
+@Headless
 Scenario: Revote favourite car
 	Given I am on the main page
 	And I login to the application
@@ -41,7 +41,7 @@ Scenario: Revote favourite car
 
 @test
 @basic
-@Edge
+@Headless
 Scenario: Traverse through pages and logout
 	Given I am on the main page
 	And I login to the application
