@@ -15,7 +15,7 @@ namespace NunitPrac.Stepdefinition
     [TestFixture(typeof(ChromeDriver))]
     [TestFixture(typeof(EdgeDriver))]
     [Parallelizable]
-    public class Stepdefinition : BaseClass
+    internal class Stepdefinition : BaseClass
     {
         private readonly Pageobjects po = new Pageobjects(Driver);
         private readonly WebDriverWait wait = new WebDriverWait(Driver, new TimeSpan(0, 0, 5));

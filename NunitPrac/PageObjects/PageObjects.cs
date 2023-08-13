@@ -3,7 +3,7 @@ using SeleniumExtras.PageObjects;
 
 namespace NunitPrac.PageObjects
 {
-    public class Pageobjects
+    internal class Pageobjects
     {
         protected internal Pageobjects(IWebDriver driver)
         {

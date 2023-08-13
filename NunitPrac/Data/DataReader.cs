@@ -5,7 +5,7 @@ using System.IO;
 
 namespace NunitPrac.Data
 {
-    public class DataReader
+   internal class DataReader
     {
         private readonly Dictionary<string, string> TestData = JsonConvert.DeserializeObject<Dictionary<string, string>>(File.OpenText(AppDomain.CurrentDomain.BaseDirectory + "//Data//TestData.json").ReadToEnd());
 

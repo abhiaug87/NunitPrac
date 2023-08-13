@@ -9,7 +9,7 @@ namespace NunitPrac.Utilities
 {
     [TestFixture(typeof(ChromeDriver))]
     [TestFixture(typeof(EdgeDriver))]
-    internal class DriverFactory
+    abstract class DriverFactory
     {
         protected internal static IWebDriver InitiateWebDriver(string browser)
         {

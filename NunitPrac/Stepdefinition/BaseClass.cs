@@ -2,7 +2,7 @@
 
 namespace NunitPrac.Stepdefinition
 {
-    public class BaseClass
+    abstract class BaseClass
     {
         protected static IWebDriver Driver { get; set; }
 
