@@ -1,5 +1,4 @@
 ﻿using NUnit.Framework;
-using Config = NunitPrac.Data.DataReader;
 using NunitPrac.PageObjects;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
@@ -8,6 +7,7 @@ using System;
 using System.IO;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Edge;
+using NunitPrac.Data;
 
 namespace NunitPrac.Stepdefinition
 {
@@ -17,18 +17,19 @@ namespace NunitPrac.Stepdefinition
     [Parallelizable]
     public class Stepdefinition : BaseClass
     {
-        readonly Pageobjects po = new Pageobjects(Driver);
-        readonly WebDriverWait wait = new WebDriverWait(Driver, new TimeSpan(0, 0, 5));
+        private readonly Pageobjects po = new Pageobjects(Driver);
+        private readonly WebDriverWait wait = new WebDriverWait(Driver, new TimeSpan(0, 0, 5));
+        private readonly DataReader Config = new DataReader();
 
         [Given(@"I am on the main page")]
-        public void GivenIAmOnTheMainPage()
+        private void GivenIAmOnTheMainPage()
         {
             Driver.Navigate().GoToUrl(Config.ReadItem("TestData.json", "url"));
         }
 
 
         [Given(@"I click on ""([^""]*)""")]
-        public void GivenIClickOn(string register)
+        private void GivenIClickOn(string register)
         {
             Assert.IsTrue(po.registry.Text.Contains(register), "Text does not match as expected");
             po.registry.Click();
@@ -36,7 +37,7 @@ namespace NunitPrac.Stepdefinition
 
 
         [When(@"I add my details")]
-        public void WhenIAddMyDetails()
+        private void WhenIAddMyDetails()
         {
             StreamWriter writer = new StreamWriter("..//username.txt");
             Random rnd = new Random();
@@ -63,13 +64,13 @@ namespace NunitPrac.Stepdefinition
         }
 
         [Then(@"I see the message ""([^""]*)""")]
-        public void ThenISeeTheMessage(string message)
+        private void ThenISeeTheMessage(string message)
         {
             Assert.IsTrue(po.cnfmsg.Text.Contains(message), "Text does not match as expected");
         }
 
         [When(@"I click ""([^""]*)""")]
-        public void WhenIClick(string cancel)
+        private void WhenIClick(string cancel)
         {
             Assert.IsTrue(po.cancelbtn.Text.Contains(cancel), "Text does not match as expected");
             po.cancelbtn.Click();
@@ -78,7 +79,7 @@ namespace NunitPrac.Stepdefinition
 
         [Then(@"I am redirected to the main page")]
         [Given(@"I am redirected to the main page")]
-        public void ThenIAmRedirectedToTheMainPage()
+        private void ThenIAmRedirectedToTheMainPage()
         {
             Driver.Navigate().GoToUrl(Config.ReadItem("TestData.json", "url"));
             Assert.IsTrue(po.brandlbl.Text.Contains(Config.ReadItem("TestData.json", "brandlbl")), "Text does not match as expected");
@@ -100,7 +101,7 @@ namespace NunitPrac.Stepdefinition
 
 
         [Given(@"I login to the application")]
-        public void GivenILoginToTheApplication()
+        private void GivenILoginToTheApplication()
         {
             Assert.IsTrue(po.loginbtn.Text.Contains(Config.ReadItem("TestData.json", "logintxt")), "Text does not match as expected");
             StreamReader reader = new StreamReader("..//username.txt");
@@ -111,7 +112,7 @@ namespace NunitPrac.Stepdefinition
         }
 
         [Given(@"I select my favorite car")]
-        public void GivenISelectMyFavoriteCar()
+        private void GivenISelectMyFavoriteCar()
         {
             wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-home/div/div[3]/div/a/img")).Displayed);
             Assert.IsTrue(po.img3.Displayed, "Image is not displayed");
@@ -122,7 +123,7 @@ namespace NunitPrac.Stepdefinition
 
 
         [When(@"I cast a vote for my favorite car")]
-        public void WhenICastAVoteForMyFavoriteCar()
+        private void WhenICastAVoteForMyFavoriteCar()
         {
             var i = Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-model/div/div[1]/div[3]/div[2]/div[1]/h4/strong")).Text;
             po.votingtxtfield.SendKeys(Config.ReadItem("TestData.json", "carvoting"));
@@ -134,14 +135,14 @@ namespace NunitPrac.Stepdefinition
         }
 
         [Then(@"I am able to see the message ""([^""]*)""")]
-        public void ThenIAmAbleToSeeTheMessage(string message)
+        private void ThenIAmAbleToSeeTheMessage(string message)
         {
             Assert.IsTrue(po.votingmsg.Text.Contains(message), "Text does not match as expected");
         }
 
 
         [Given(@"I click on the list of cars")]
-        public void GivenIclickonthelistofcars()
+        private void GivenIclickonthelistofcars()
         {
             po.img3.Click();
             wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-overall/div/div/table")).Displayed);
@@ -153,7 +154,7 @@ namespace NunitPrac.Stepdefinition
 
 
         [When(@"I traverse forward through the pages")]
-        public void WhenITraverseForwardThroughThePages()
+        private void WhenITraverseForwardThroughThePages()
         {
             po.forward.Click();
             wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-overall/div/div/table")).Displayed);
@@ -171,7 +172,7 @@ namespace NunitPrac.Stepdefinition
         }
 
         [When(@"I traverse back through the pages")]
-        public void WhenITraverseBackThroughThePages()
+        private void WhenITraverseBackThroughThePages()
         {
             po.backward.Click();
             wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-overall/div/div/table")).Displayed);
@@ -188,7 +189,7 @@ namespace NunitPrac.Stepdefinition
         }
 
         [Then(@"I am able to see the different cars")]
-        public void ThenIAmAbleToSeeTheDifferentCars()
+        private void ThenIAmAbleToSeeTheDifferentCars()
         {
             Assert.IsTrue(po.car.Text.Contains(Config.ReadItem("TestData.json", "car1")), "Text does not match as expected");
             Assert.IsTrue(po.model.Text.Contains(Config.ReadItem("TestData.json", "model1")), "Text does not match as expected");
@@ -198,14 +199,14 @@ namespace NunitPrac.Stepdefinition
         }
 
         [Then(@"I logout of the application")]
-        public void ThenILogoutOfTheApplication()
+        private void ThenILogoutOfTheApplication()
         {
             Assert.IsTrue(po.logoutbtn.Text.Contains(Config.ReadItem("TestData.json", "logout")), "Text does not match as expected");
             po.logoutbtn.Click();
         }
 
         [When(@"I proceed to vote")]
-        public void WhenIProceedToVote()
+        private void WhenIProceedToVote()
         {
             wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-home/div/div[3]/div/a/img")).Displayed);
             Assert.IsTrue(po.img3.Displayed, "Image is not displayed");

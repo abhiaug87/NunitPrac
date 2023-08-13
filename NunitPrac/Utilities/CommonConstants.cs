@@ -4,25 +4,25 @@ namespace NunitPrac.Utilities
 {
     public static class CommonConstants
     {
-        public static class DriverSettings
+        internal static class DriverSettings
         {
             // running tests on chrome
-            public static string filepath = Directory.GetParent(NUnit.Framework.TestContext.CurrentContext.TestDirectory).Parent.Parent + "//Driver//";
-            public static string BinaryLocationChrome = filepath;
+            internal static string filepath = Directory.GetParent(NUnit.Framework.TestContext.CurrentContext.TestDirectory).Parent.Parent + "//Driver//";
+            internal static string BinaryLocationChrome = filepath;
 
             // running tests on edge
 
-            public static string BinaryLocationEdge = filepath;
+            internal static string BinaryLocationEdge = filepath;
 
             // running tests on edge
 
-            public static string BinaryLocationFireFox = filepath;
+            internal static string BinaryLocationFireFox = filepath;
 
-            public static string ChromeBrowser = "Chrome";
-            public static string EdgeBrowser = "Edge";
-            public static string HeadlessBrowser = "Headless";
-            public static string FireFoxBrowser = "FireFox";
-            public static int DefaultWaitTime = 3000;
+            internal static string ChromeBrowser = "Chrome";
+            internal static string EdgeBrowser = "Edge";
+            internal static string HeadlessBrowser = "Headless";
+            internal static string FireFoxBrowser = "FireFox";
+            internal static int DefaultWaitTime = 3000;
         }
     }
 }

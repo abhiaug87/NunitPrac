@@ -5,11 +5,11 @@ using System.IO;
 
 namespace NunitPrac.Data
 {
-    public static class DataReader
+    public class DataReader
     {
-        private static readonly Dictionary<string, string> TestData = JsonConvert.DeserializeObject<Dictionary<string, string>>(File.OpenText(AppDomain.CurrentDomain.BaseDirectory + "//Data//TestData.json").ReadToEnd());
+        private readonly Dictionary<string, string> TestData = JsonConvert.DeserializeObject<Dictionary<string, string>>(File.OpenText(AppDomain.CurrentDomain.BaseDirectory + "//Data//TestData.json").ReadToEnd());
 
-        public static string ReadItem(string fileName, string itemName)
+        internal string ReadItem(string fileName, string itemName)
         {
             if (fileName == "TestData.json")
             {

@@ -13,12 +13,12 @@ namespace NunitPrac.Utilities
     public class Hooks : BaseClass
     {
         private readonly ScenarioContext scenarioContext;
-        public Hooks(ScenarioContext scenarioContext)
+        internal Hooks(ScenarioContext scenarioContext)
         {
             this.scenarioContext = scenarioContext;
         }
         [BeforeScenario]
-        public void BeforeScenario()
+        private void BeforeScenario()
         {
             if (scenarioContext.ScenarioInfo.Tags.Contains("Chrome"))
             {
@@ -39,7 +39,7 @@ namespace NunitPrac.Utilities
         }
 
         [AfterScenario]
-        public void AfterScenario()
+        private void AfterScenario()
         {
             if (NUnit.Framework.TestContext.CurrentContext.Result.Outcome != ResultState.Success)
             {
