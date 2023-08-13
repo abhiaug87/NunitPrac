@@ -9,7 +9,7 @@ namespace NunitPrac.Data
     {
         private readonly Dictionary<string, string> TestData = JsonConvert.DeserializeObject<Dictionary<string, string>>(File.OpenText(AppDomain.CurrentDomain.BaseDirectory + "//Data//TestData.json").ReadToEnd());
 
-        internal string ReadItem(string fileName, string itemName)
+        protected internal string ReadItem(string fileName, string itemName)
         {
             if (fileName == "TestData.json")
             {

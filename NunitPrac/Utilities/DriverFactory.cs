@@ -9,9 +9,9 @@ namespace NunitPrac.Utilities
 {
     [TestFixture(typeof(ChromeDriver))]
     [TestFixture(typeof(EdgeDriver))]
-    public class DriverFactory
+    internal class DriverFactory
     {
-        internal static IWebDriver InitiateWebDriver(string browser)
+        protected internal static IWebDriver InitiateWebDriver(string browser)
         {
             var chromeOptions = new ChromeOptions();
             chromeOptions.AddArguments(

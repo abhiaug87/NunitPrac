@@ -10,10 +10,10 @@ using OpenQA.Selenium.Support.Extensions;
 namespace NunitPrac.Utilities
 {
     [Binding]
-    public class Hooks : BaseClass
+    internal abstract class Hooks : BaseClass
     {
         private readonly ScenarioContext scenarioContext;
-        internal Hooks(ScenarioContext scenarioContext)
+        private Hooks(ScenarioContext scenarioContext)
         {
             this.scenarioContext = scenarioContext;
         }
