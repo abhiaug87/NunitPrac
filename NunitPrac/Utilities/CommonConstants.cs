@@ -2,7 +2,7 @@
 
 namespace NunitPrac.Utilities
 {
-    public static class CommonConstants
+    internal static class CommonConstants
     {
         internal static class DriverSettings
         {
