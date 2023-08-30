@@ -3,9 +3,9 @@ using SeleniumExtras.PageObjects;
 
 namespace NunitPrac.PageObjects
 {
-    internal class Pageobjects
+    internal class PageObject
     {
-        protected internal Pageobjects(IWebDriver driver)
+        protected internal PageObject(IWebDriver driver)
         {
             PageFactory.InitElements(driver, this);
         }

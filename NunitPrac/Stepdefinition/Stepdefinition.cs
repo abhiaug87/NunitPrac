@@ -9,15 +9,22 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Edge;
 using NunitPrac.Data;
 
-namespace NunitPrac.Stepdefinition
+namespace NunitPrac.StepDefinition
 {
+
+    internal abstract class BaseClass
+    {
+        protected static IWebDriver Driver { get; set; }
+
+    }
+
     [Binding]
     [TestFixture(typeof(ChromeDriver))]
     [TestFixture(typeof(EdgeDriver))]
     [Parallelizable]
-    internal class Stepdefinition : BaseClass
+    internal class StepDefinition : BaseClass
     {
-        private readonly Pageobjects po = new Pageobjects(Driver);
+        private readonly PageObject po = new PageObject(Driver);
         private readonly WebDriverWait wait = new WebDriverWait(Driver, new TimeSpan(0, 0, 5));
         private readonly DataReader Config = new DataReader();
 

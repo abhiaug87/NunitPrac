@@ -1,4 +1,4 @@
-﻿using NunitPrac.Stepdefinition;
+﻿using NunitPrac.StepDefinition;
 using System.Linq;
 using TechTalk.SpecFlow;
 using System;
@@ -45,9 +45,9 @@ namespace NunitPrac.Utilities
             {
                 var dir = $@"{Directory.GetParent(NUnit.Framework.TestContext.CurrentContext.TestDirectory).Parent.Parent}/Screenshots";
                 Directory.CreateDirectory(dir);
-                string pathfile = Path.Combine(Directory.GetParent(NUnit.Framework.TestContext.CurrentContext.TestDirectory).Parent.Parent + @"//Screenshots", "Screenshot" + "_" + DateTime.Now.ToString("(dd_MMMM_hh_mm_ss_tt).JPG"));
+                string PathFile = Path.Combine(Directory.GetParent(NUnit.Framework.TestContext.CurrentContext.TestDirectory).Parent.Parent + @"//Screenshots", "Screenshot" + "_" + DateTime.Now.ToString("(dd_MMMM_hh_mm_ss_tt).JPG"));
                 var screenshot = Driver.TakeScreenshot();
-                screenshot.SaveAsFile(pathfile, ScreenshotImageFormat.Jpeg);
+                screenshot.SaveAsFile(PathFile, ScreenshotImageFormat.Jpeg);
             }
             Console.WriteLine("Test has passed");
             Driver.Dispose();
