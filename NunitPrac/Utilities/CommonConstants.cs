@@ -6,15 +6,18 @@ namespace NunitPrac.Utilities
     {
         internal static class DriverSettings
         {
-            // running tests on chrome
+
             internal static string FilePath = Directory.GetParent(NUnit.Framework.TestContext.CurrentContext.TestDirectory).Parent.Parent + "//Driver//";
+            
+            // running tests on chrome
+            
             internal static string BinaryLocationChrome = FilePath;
 
             // running tests on edge
 
             internal static string BinaryLocationEdge = FilePath;
 
-            // running tests on edge
+            // running tests on firefox
 
             internal static string BinaryLocationFireFox = FilePath;
 

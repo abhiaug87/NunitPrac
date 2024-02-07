@@ -22,21 +22,21 @@ namespace NunitPrac.Utilities
             "--no-sandbox"
          );
             IWebDriver driver = null;
-            if (browser.Equals(CommonConstants.DriverSettings.HeadlessBrowser))
+            if (browser.Equals(CommonConstants.DriverSettings.FireFoxBrowser))
             {
-                driver = new ChromeDriver(CommonConstants.DriverSettings.BinaryLocationChrome, chromeOptions);
+                driver = new FirefoxDriver(CommonConstants.DriverSettings.BinaryLocationFireFox);
             }
-            if (browser.Equals(CommonConstants.DriverSettings.ChromeBrowser))
+            else if (browser.Equals(CommonConstants.DriverSettings.ChromeBrowser))
             {
                 driver = new ChromeDriver(CommonConstants.DriverSettings.BinaryLocationChrome);
             }
-            if (browser.Equals(CommonConstants.DriverSettings.EdgeBrowser))
+            else if (browser.Equals(CommonConstants.DriverSettings.EdgeBrowser))
             {
                 driver = new EdgeDriver(CommonConstants.DriverSettings.BinaryLocationEdge);
             }
-            else if (browser.Equals(CommonConstants.DriverSettings.FireFoxBrowser))
+            else
             {
-                driver = new FirefoxDriver(CommonConstants.DriverSettings.BinaryLocationFireFox);
+                driver = new ChromeDriver(CommonConstants.DriverSettings.BinaryLocationChrome, chromeOptions);
             }
 
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(CommonConstants.DriverSettings.DefaultWaitTime);

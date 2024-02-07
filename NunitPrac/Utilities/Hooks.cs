@@ -25,7 +25,7 @@ namespace NunitPrac.Utilities
         }
 
         [BeforeTestRun]
-        public static void InitializeReports()
+        private static void InitializeReports()
         {
             var reports = new ExtentHtmlReporter(Path.Combine(Directory.GetParent(TestContext.CurrentContext.TestDirectory).Parent.Parent + @"//Reports", "index.html"));
             reports.Config.Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Dark;
@@ -35,7 +35,7 @@ namespace NunitPrac.Utilities
         }
 
         [BeforeFeature]
-        public static void BeforeFeature(FeatureContext context)
+        private static void BeforeFeature(FeatureContext context)
         {
             feature = htmlreport.CreateTest<Feature>(context.FeatureInfo.Title);
         }
@@ -62,7 +62,7 @@ namespace NunitPrac.Utilities
         }
 
         [AfterStep]
-        public void AfterStep(ScenarioContext context)
+        private void AfterStep(ScenarioContext context)
         {
             var step = ScenarioStepContext.Current.StepInfo.StepDefinitionType.ToString();
 
